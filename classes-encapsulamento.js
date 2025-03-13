@@ -21,8 +21,12 @@ class Cliente {
     }
     
     adicionarTelefone(telefone) {
+        if (!Array.isArray(this.telefones)) {
+            this.telefones = [];
+        }
         this.telefones.push(telefone);
     }
+    
 }
 
 class Telefone {
@@ -66,6 +70,9 @@ class Empresa {
     }
     
     adicionarTelefone(telefone) {
+        if (!Array.isArray(this.telefones)) {
+            this.telefones = [];
+        }
         this.telefones.push(telefone);
     }
     
